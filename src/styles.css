@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: rgb(240, 239, 239);
@@ -27,7 +29,7 @@ label {
 }
 
 input {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin-bottom: 20px;
     border: none;
