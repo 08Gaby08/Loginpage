@@ -22,6 +22,10 @@ h1 {
     color: white;
 }
 
+p{
+    color: white;
+}
+
 label {
     display: block;
     margin: 10px 0 5px;
