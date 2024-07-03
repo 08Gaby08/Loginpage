@@ -68,7 +68,7 @@ function Login() {
       <h1>Login</h1>
       {msg && <div style={{
         color: "white",
-        background: "#ee0a9d",
+        background: "#FF1493",
         padding: "12px",
       }}>
         {msg}
