@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import RegisterForm from '.src/pages/RegisterForm'
+
 
 function App() {
   return (
