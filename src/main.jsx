@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import App from './App'
-import Login from './Login'
-import Home from './Home'
+import App from './pages/App'
+import Login from './pages/Login'
+import Home from './pages/Home'
 import './styles.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
