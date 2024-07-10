@@ -1,4 +1,3 @@
-// components/Button.jsx
 import React from 'react';
 import { css } from '@emotion/react';
 import { buttonStyle } from '../styles/styles';
