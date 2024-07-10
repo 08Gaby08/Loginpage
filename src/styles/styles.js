@@ -4,12 +4,12 @@ import { css } from '@emotion/react';
 export const formContainer = css`
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 300px;
   margin: auto;
 `;
 
 export const inputField = css`
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 `;
 
 export const errorMessage = css`
@@ -18,7 +18,7 @@ export const errorMessage = css`
 `;
 
 export const button = css`
-  padding: 10px;
+  padding: 8px;
   background-color: #007bff;
   color: white;
   border: none;

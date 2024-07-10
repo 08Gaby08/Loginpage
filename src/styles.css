@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 108vh;
     margin: 0;
 }
 
@@ -20,6 +20,7 @@ body {
 
 h1 {
     color: white;
+    margin-bottom: 15px;
 }
 
 p{
@@ -48,6 +49,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    margin-top: 4px;
 }
 
 button:hover {
