@@ -2,8 +2,10 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import Input from '../components/Input';
+import Button from '../components/Button';
 import { css } from '@emotion/react';
-import { formContainer, inputField, errorMessage, button } from '../styles/styles';
+import { container, heading, errorMessage } from '../styles';
 
 const schema = z.object({
   fullName: z.string().min(1, 'Nome completo é obrigatório'),
@@ -29,39 +31,24 @@ const RegisterForm = () => {
   };
 
   return (
-    <form css={formContainer} onSubmit={handleSubmit(onSubmit)}>
-      <div css={inputField}>
-        <label>Nome completo</label>
-        <input type="text" {...register('fullName')} />
-        {errors.fullName && <span css={errorMessage}>{errors.fullName.message}</span>}
-      </div>
-      <div css={inputField}>
-        <label>Username</label>
-        <input type="text" {...register('username')} />
-        {errors.username && <span css={errorMessage}>{errors.username.message}</span>}
-      </div>
-      <div css={inputField}>
-        <label>Email</label>
-        <input type="email" {...register('email')} />
-        {errors.email && <span css={errorMessage}>{errors.email.message}</span>}
-      </div>
-      <div css={inputField}>
-        <label>Aniversário</label>
-        <input type="date" {...register('birthday')} />
-        {errors.birthday && <span css={errorMessage}>{errors.birthday.message}</span>}
-      </div>
-      <div css={inputField}>
-        <label>Senha</label>
-        <input type="password" {...register('password')} />
-        {errors.password && <span css={errorMessage}>{errors.password.message}</span>}
-      </div>
-      <div css={inputField}>
-        <label>Confirmar a senha</label>
-        <input type="password" {...register('confirmPassword')} />
-        {errors.confirmPassword && <span css={errorMessage}>{errors.confirmPassword.message}</span>}
-      </div>
-      <button type="submit" css={button}>Registrar</button>
-    </form>
+    <div css={container}>
+      <h1 css={heading}>Registrar</h1>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Input label="Nome completo" error={errors.fullName?.message} {...register('fullName')} />
+        <Input label="Username" error={errors.username?.message} {...register('username')} />
+        <Input label="Email" type="email" error={errors.email?.message} {...register('email')} />
+        <Input label="Aniversário" type="date" error={errors.birthday?.message} {...register('birthday')} />
+        <Input label="Senha" type="password" error={errors.password?.message} {...register('password')} />
+        <Input label="Confirmar a senha" type="password" error={errors.confirmPassword?.message} {...register('confirmPassword')} />
+        <Button type="submit">Registrar</Button>
+      </form>
+      {errors.fullName && <span css={errorMessage}>{errors.fullName.message}</span>}
+      {errors.username && <span css={errorMessage}>{errors.username.message}</span>}
+      {errors.email && <span css={errorMessage}>{errors.email.message}</span>}
+      {errors.birthday && <span css={errorMessage}>{errors.birthday.message}</span>}
+      {errors.password && <span css={errorMessage}>{errors.password.message}</span>}
+      {errors.confirmPassword && <span css={errorMessage}>{errors.confirmPassword.message}</span>}
+    </div>
   );
 };
 

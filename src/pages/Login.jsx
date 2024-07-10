@@ -1,99 +1,75 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Input from '../components/Input';
+import Button from '../components/Button';
+import { css } from '@emotion/react';
+import { container, heading, errorMessage } from '../styles';
 
-//const data = {
-//  email: "meuemail@gmail.com",
-//  password: "12345678"
-//}
 function Api(data){
-  const { email, password  } = data; 
-  console.log("seu email é", email, "eu espero","meuemail@gmail.com")
-  console.log("sua senha é", password,  "eu espero", "12345678")
+  const { email, password } = data;
+  console.log("seu email é", email, "eu espero", "meuemail@gmail.com");
+  console.log("sua senha é", password, "eu espero", "12345678");
 
   if (email === "meuemail@gmail.com"){
     if (password === "12345678"){
       return {
-        "success":true,
+        "success": true,
         "messages": "Senha correta"
-      }
+      };
     } else {
-      return {"success":false,"messages":"Senha Incorreta"}
+      return { "success": false, "messages": "Senha Incorreta" };
     }
   }
-  return {"success":false, "messages":"informação invalida"}
+  return { "success": false, "messages": "informação invalida" };
 }
 
-function Login() {
-  const [msg, setMsg] = useState("")
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const navigate = useNavigate()
+const Login = () => {
+  const [msg, setMsg] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    console.log("cheguei até aqui")
+    console.log("cheguei até aqui");
 
-    e.preventDefault()
+    e.preventDefault();
 
-    /*
-    const url = `api.com/auth/login`;
-    const data =fetch(url, {
-      method: "POST",
-      body: JSON.stringify({
-        email, password
-      })
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data)
-        if (!data.success){
-          setMsg(data.messages)
-        }
+    const data = Api({ email, password });
 
-      })
-    */
-    const data = Api({ email, password})
-    
-    // Lógica de autenticação aqui
-    if (data.success){
-      alert("Login com sucesso")
-      navigate('/home')
+    if (data.success) {
+      alert("Login com sucesso");
+      navigate('/home');
     } else {
-      alert(data.messages)
-      setMsg(data.messages)
+      alert(data.messages);
+      setMsg(data.messages);
     }
-  }
+  };
 
   return (
-    <div className="login-container">
-      <h1>Login</h1>
-      {msg && <div style={{
-        color: "white",
-        background: "#FF1493",
-        padding: "12px",
-      }}>
-        {msg}
-      </div>}
+    <div css={container}>
+      <h1 css={heading}>Login</h1>
+      {msg && <div css={errorMessage}>{msg}</div>}
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email:</label>
-        <input
+        <Input
+          label="Email"
           type="email"
-          id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          error={msg && !email ? msg : null}
           required
         />
-        <label htmlFor="password">Senha:</label>
-        <input
+        <Input
+          label="Senha"
           type="password"
-          id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          error={msg && !password ? msg : null}
           required
         />
-        <button type="submit">Enviar</button>
+        <Button type="submit">Enviar</Button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

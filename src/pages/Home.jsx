@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { css } from '@emotion/react';
+import { container, heading, paragraph } from '../styles';
 
-function Home() {
+const Home = () => {
   return (
-    <div className="home-container">
-      <h1>Bem-vindo!</h1>
-      <p>Você foi redirecionado com sucesso.</p>
+    <div css={container}>
+      <h1 css={heading}>Bem-vindo!</h1>
+      <p css={paragraph}>Você foi redirecionado com sucesso.</p>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
