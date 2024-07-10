@@ -1,7 +1,7 @@
 // components/Input.js
 import React from 'react';
 import { css } from '@emotion/react';
-import { inputStyle, labelStyle, errorMessage } from '../styles';
+import { inputStyle, labelStyle, errorMessage } from '../styles/styles';
 
 const Input = ({ label, error, ...props }) => (
   <div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { container, heading, paragraph } from '../styles';
+import { container, heading, paragraph } from '../styles/styles';
 
 const Home = () => {
   return (

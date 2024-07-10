@@ -1,7 +1,7 @@
 // components/Button.jsx
 import React from 'react';
 import { css } from '@emotion/react';
-import { buttonStyle } from '../styles';
+import { buttonStyle } from '../styles/styles';
 
 const Button = ({ children, ...props }) => (
   <button css={buttonStyle} {...props}>

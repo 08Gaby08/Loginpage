@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import { css } from '@emotion/react';
-import { container, heading, errorMessage } from '../styles';
+import { container, heading, errorMessage } from '../styles/styles';
 
 function Api(data){
   const { email, password } = data;

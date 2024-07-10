@@ -5,7 +5,7 @@ import { z } from 'zod';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import { css } from '@emotion/react';
-import { container, heading, errorMessage } from '../styles';
+import { container, heading, errorMessage } from '../styles/styles';
 
 const schema = z.object({
   fullName: z.string().min(1, 'Nome completo é obrigatório'),
