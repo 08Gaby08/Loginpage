@@ -7,7 +7,7 @@ export const globalStyles = css`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 108vh;
+    height: 110vh;
     margin: 0;
   }
 `;
@@ -18,6 +18,7 @@ export const container = css`
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  widht: 300px;
 `;
 
 export const heading = css`
@@ -38,25 +39,12 @@ export const labelStyle = css`
 export const inputStyle = css`
   width: 90%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: none;
   border-radius: 5px;
 `;
 
-export const buttonStyle = css`
-  background-color: white;
-  color: rgb(238, 10, 135);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 4px;
-  &:hover {
-    background-color: rgb(238, 10, 135);
-    color: white;
-  }
-`;
+
 
 export const errorMessage = css`
   color: white;

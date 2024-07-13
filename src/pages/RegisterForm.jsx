@@ -32,7 +32,7 @@ const RegisterForm = () => {
 
   return (
     <div css={container}>
-      <h1 css={heading}>Registrar</h1>
+      <h1 css={heading}></h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input label="Nome completo" error={errors.fullName?.message} {...register('fullName')} />
         <Input label="Username" error={errors.username?.message} {...register('username')} />
