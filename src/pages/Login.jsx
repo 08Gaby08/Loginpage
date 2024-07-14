@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Input from '../components/Input/';
 import Button from '../components/Button';
 import Container from '../components/container/Container'
+import InputPassword from '../components/Inputpassword';
 import { css } from '@emotion/react';
 import {errorMessage } from '../styles/styles';
 
