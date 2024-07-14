@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Input from '../components/Input';
+import Input from '../components/Input/';
 import Button from '../components/Button';
 import Container from '../components/container/Container'
 import { css } from '@emotion/react';
@@ -47,7 +47,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+<div>
     <Container title="Login"></Container>
       {msg && <div css={errorMessage}>{msg}</div>}
       <form onSubmit={handleSubmit}>
@@ -69,7 +69,7 @@ const Login = () => {
         />
         <Button type="submit">Enviar</Button>
       </form>
-   </div>
+  </div>
   );
 }
 

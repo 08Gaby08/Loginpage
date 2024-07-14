@@ -33,7 +33,7 @@ const RegisterForm = () => {
 
   return (
     <div>
-    <Container title="">
+    <Container title=""></Container>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input label="Nome completo" error={errors.fullName?.message} {...register('fullName')} />
         <Input label="Username" error={errors.username?.message} {...register('username')} />
@@ -49,7 +49,6 @@ const RegisterForm = () => {
       {errors.birthday && <span css={errorMessage}>{errors.birthday.message}</span>}
       {errors.password && <span css={errorMessage}>{errors.password.message}</span>}
       {errors.confirmPassword && <span css={errorMessage}>{errors.confirmPassword.message}</span>}
-      </Container>
     </div>
   );
 }
