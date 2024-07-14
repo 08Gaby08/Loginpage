@@ -4,6 +4,7 @@ import { css } from '@emotion/react';
 export const iconStyle = css`
   cursor: pointer;
   position: absolute;
+  dispay:flex;
   right: 40px;
   top: 62%;
   transform: translateY(-50%);

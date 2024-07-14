@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import RegisterForm from './RegisterForm';
 import Button from '../components/Button';
 import Container from '../components/container/Container'
-import { css } from '@emotion/react';
 
 const App = () => {
   return (

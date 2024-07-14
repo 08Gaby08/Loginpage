@@ -62,11 +62,11 @@ const Login = () => {
         />
          <InputPassword
           label="Senha:"
-          value={password}
+          value={password} css={css`right: 0.5rem;`}
           onChange={(e) => setPassword(e.target.value)}
           error={msg && !password ? msg : null}
           required
-        />
+          />
         <Button type="submit">Enviar</Button>
       </form>
   </div>
