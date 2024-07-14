@@ -8,12 +8,11 @@ import { css } from '@emotion/react';
 const App = () => {
   return (
     <div>
-  <Container title="Bem-vindo faça seu cadastro!">
+  <Container title="Bem-vindo faça seu cadastro!"> </Container>
       <RegisterForm />
       <Link to="/login">
         <Button>Ir para Login</Button>
       </Link>
-  </Container>
   </div>
 
   );

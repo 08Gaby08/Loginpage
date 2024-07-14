@@ -21,7 +21,7 @@ const InputPassword = ({ value, onChange, error, label, ...rest }) => {
         {...rest}
       />
       <div css={iconStyle} onClick={togglePasswordVisibility}>
-        {showPassword ? <EyeOff size={24} /> : <Eye size={24} />}
+        {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
       </div>
     </div>
   );
