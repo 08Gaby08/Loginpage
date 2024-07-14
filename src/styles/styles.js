@@ -13,12 +13,6 @@ export const globalStyles = css`
 `;
 
 
-
-export const heading = css`
-  color: white;
-  margin-bottom: 15px;
-`;
-
 export const paragraph = css`
   color: white;
 `;

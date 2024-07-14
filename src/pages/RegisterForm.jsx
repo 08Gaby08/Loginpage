@@ -4,8 +4,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import Input from '../components/Input';
 import Button from '../components/Button';
+import Container from '../components/container/Container'
 import { css } from '@emotion/react';
-import { container, heading, errorMessage } from '../styles/styles';
+import {errorMessage } from '../styles/styles';
 
 const schema = z.object({
   fullName: z.string().min(1, 'Nome completo é obrigatório'),
@@ -31,8 +32,8 @@ const RegisterForm = () => {
   };
 
   return (
-    <div css={container}>
-      <h1 css={heading}></h1>
+    <div>
+    <Container title="">
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input label="Nome completo" error={errors.fullName?.message} {...register('fullName')} />
         <Input label="Username" error={errors.username?.message} {...register('username')} />
@@ -48,8 +49,9 @@ const RegisterForm = () => {
       {errors.birthday && <span css={errorMessage}>{errors.birthday.message}</span>}
       {errors.password && <span css={errorMessage}>{errors.password.message}</span>}
       {errors.confirmPassword && <span css={errorMessage}>{errors.confirmPassword.message}</span>}
+      </Container>
     </div>
   );
-};
+}
 
 export default RegisterForm;

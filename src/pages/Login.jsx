@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Input from '../components/Input';
 import Button from '../components/Button';
+import Container from '../components/container/Container'
 import { css } from '@emotion/react';
-import { container, heading, errorMessage } from '../styles/styles';
+import {errorMessage } from '../styles/styles';
 
 function Api(data){
   const { email, password } = data;
@@ -46,8 +47,8 @@ const Login = () => {
   };
 
   return (
-    <div css={container}>
-      <h1 css={heading}>Login</h1>
+    <div>
+    <Container title="Login"></Container>
       {msg && <div css={errorMessage}>{msg}</div>}
       <form onSubmit={handleSubmit}>
         <Input
@@ -68,8 +69,8 @@ const Login = () => {
         />
         <Button type="submit">Enviar</Button>
       </form>
-    </div>
+   </div>
   );
-};
+}
 
 export default Login;

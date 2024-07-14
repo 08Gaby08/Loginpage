@@ -1,11 +1,12 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { container, heading, paragraph } from '../styles/styles';
+import Container from '../components/container/Container'
+import { paragraph } from '../styles/styles';
 
 const Home = () => {
   return (
-    <div css={container}>
-      <h1 css={heading}>Bem-vindo!</h1>
+    <div>
+    <Container title="Bem-vindo!"> </Container>
       <p css={paragraph}>Você foi redirecionado com sucesso.</p>
     </div>
   );
