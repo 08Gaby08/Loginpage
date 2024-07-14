@@ -30,19 +30,7 @@ export const paragraph = css`
   color: white;
 `;
 
-export const labelStyle = css`
-  display: block;
-  margin: 10px 0 5px;
-  color: white;
-`;
 
-export const inputStyle = css`
-  width: 90%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 5px;
-`;
 
 
 

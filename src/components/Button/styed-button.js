@@ -15,3 +15,8 @@ export const buttonStyle = css`
     color: white;
   }
 `;
+export const labelStyle = css`
+  display: block;
+  margin: 10px 0 5px;
+  color: white;
+`;
