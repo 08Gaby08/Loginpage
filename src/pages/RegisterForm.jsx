@@ -5,6 +5,7 @@ import { z } from 'zod';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import Container from '../components/container/Container'
+import InputPassword from '../components/Inputpassword';
 import { css } from '@emotion/react';
 import {errorMessage } from '../styles/styles';
 
@@ -39,8 +40,8 @@ const RegisterForm = () => {
         <Input label="Username" error={errors.username?.message} {...register('username')} />
         <Input label="Email" type="email" error={errors.email?.message} {...register('email')} />
         <Input label="Aniversário" type="date" error={errors.birthday?.message} {...register('birthday')} />
-        <Input label="Senha" type="password" error={errors.password?.message} {...register('password')} />
-        <Input label="Confirmar a senha" type="password" error={errors.confirmPassword?.message} {...register('confirmPassword')} />
+        <InputPassword label="Senha:" {...register('password')} required/>
+        <InputPassword label="Confirmar senha:"{...register('confirmPassword')}required/>        
         <Button type="submit">Registrar</Button>
       </form>
       {errors.fullName && <span css={errorMessage}>{errors.fullName.message}</span>}

@@ -60,9 +60,8 @@ const Login = () => {
           error={msg && !email ? msg : null}
           required
         />
-        <Input
-          label="Senha"
-          type="password"
+         <InputPassword
+          label="Senha:"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           error={msg && !password ? msg : null}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
-import { Eye, EyeOff } from 'react-lucide';
+import { Eye, EyeOff } from 'lucide-react';
 import { inputStyle, labelStyle, iconStyle} from './styed-inputpassword'; 
 
 const InputPassword = ({ value, onChange, error, label, ...rest }) => {
