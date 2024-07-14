@@ -6,8 +6,9 @@ import { paragraph } from '../styles/styles';
 const Home = () => {
   return (
     <div>
-    <Container title="Bem-vindo!"> </Container>
+    <Container title="Bem-vindo!"> 
       <p css={paragraph}>Você foi redirecionado com sucesso.</p>
+      </Container>
     </div>
   );
 }

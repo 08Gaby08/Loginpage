@@ -7,11 +7,12 @@ import Container from '../components/container/Container'
 const App = () => {
   return (
     <div>
-  <Container title="Bem-vindo faça seu cadastro!"> </Container>
+  <Container title="Bem-vindo faça seu cadastro!"> 
       <RegisterForm />
       <Link to="/login">
         <Button>Ir para Login</Button>
       </Link>
+      </Container>
   </div>
 
   );

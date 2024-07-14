@@ -49,7 +49,7 @@ const Login = () => {
 
   return (
 <div>
-    <Container title="Login"></Container>
+    <Container title="Login">
       {msg && <div css={errorMessage}>{msg}</div>}
       <form onSubmit={handleSubmit}>
         <Input
@@ -69,6 +69,7 @@ const Login = () => {
           />
         <Button type="submit">Enviar</Button>
       </form>
+      </Container>
   </div>
   );
 }
