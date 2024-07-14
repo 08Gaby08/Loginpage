@@ -5,7 +5,7 @@ export const iconStyle = css`
   cursor: pointer;
   position: absolute;
   dispay:flex;
-  right: 40px;
+  right: 28px;
   top: 62%;
   transform: translateY(-50%);
 `;
