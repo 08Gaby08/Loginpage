@@ -4,8 +4,8 @@ import { css } from '@emotion/react';
 export const iconStyle = css`
   cursor: pointer;
   position: absolute;
-  right: 10px;
-  top: 55%;
+  right: 40px;
+  top: 62%;
   transform: translateY(-50%);
 `;
 export const inputStyle = css`
