@@ -49,7 +49,7 @@ const Login = () => {
 
   return (
 <div>
-    <Container title="Login">
+    <Container title="Efetuar Login">
       {msg && <div css={errorMessage}>{msg}</div>}
       <form onSubmit={handleSubmit}>
         <Input
@@ -62,10 +62,11 @@ const Login = () => {
         />
          <InputPassword
           label="Senha:"
-          value={password} css={css`right: 0.5rem;`}
+          value={password} 
           onChange={(e) => setPassword(e.target.value)}
           error={msg && !password ? msg : null}
           required
+           style={{right: '8px'}}
           />
         <Button type="submit">Enviar</Button>
       </form>

@@ -5,12 +5,12 @@ export const iconStyle = css`
   cursor: pointer;
   position: absolute;
   dispay:flex;
-  right: 28px;
+  right: 24px;
   top: 62%;
   transform: translateY(-50%);
 `;
 export const inputStyle = css`
-  width: 90%;
+  width: 88%;
   padding: 12px;
   margin-bottom: 10px;
   border: none;
