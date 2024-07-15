@@ -66,7 +66,7 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           error={msg && !password ? msg : null}
           required
-           style={{right: '8px'}}
+        style={{right: '8px'}}
           />
         <Button type="submit">Enviar</Button>
       </form>
